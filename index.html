@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Todolist</title>
+    <style> 
+    @media print {
+
+      body * {
+          visibility: hidden;
+      }
+  
+      .print-container , .print-container * {
+          visibility: visible;
+      }
+  
+    }
+  
+    </style>
+</head>
+<body>
+  <div class="row print-container" >
+    <div class="header">
+        <h1> <i class="fa fa-list"></i> To Do List</h1>
+        <input type="text" id="myInput" placeholder="Add New To-do">
+        <span onclick="newElement()" class="addBtn">Add <i class="fa fa-plus"></i></span>
+      </div>
+      <ul id="myUL">
+        <li >Yoga Class</li>
+        <li class="checked">Maths Assignment</li>
+        <li>Read a book on JavaScript</li>
+        <li class="checked">Study CSS notes</li>
+        <li>Do shopping</li>
+        <li>Take quiz</li>
+        <li>Dinner with friends</li>
+      </ul>
+    </div>
+      <button id="p" onclick="window.print();"  >Print <i class="fa fa-print"></i></button>
+      <button type="button" id="clear-list" onclick="removeAll()">Clear <i class="fa fa-trash"></i></button>
+    <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
